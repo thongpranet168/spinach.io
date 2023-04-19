@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>spinach.io</title>
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+        font-family: poppins;
+      }
+      .logo{
+        position:fixed;
+         top:0; 
+         left:0;
+         padding: 30px;
+         font-size: 20px;
+         color: white;
+      }
+      .logo h3{
+        border: 1px solid white;
+        padding: 10px;
+      }
+      .Parent {
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+        background-image: url("assests/spinach-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: right;
+        align-items: center;
+        padding: 30px;
+      }
+
+      .child1 {
+        width: 25%;
+        height: 100vh;         
+        background-image: url("assests/mascot.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: right;
+      }
+      .child1 img{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+      }
+
+      .child2 {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+      .child2 #text{
+        color: white;
+        font-weight: 700;
+        font-size: 46px;
+      }
+      .description h4{
+        color: white;
+        margin: 20px;
+        padding: 20px;
+        font-size: 28px;
+        font-weight: 400;
+      }
+      .description button{
+        background-color:green;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+
+      }
+      .description button:hover{
+        background-color:white;
+        color: green;
+        border: 3px solid green;
+        padding: 10px;
+        font-size: 20px;
+        transition-duration: 0.7s;
+      }
+      .terminal-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border: 1px solid #999;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #1e1e1e;
+    }
+
+    .terminal-header {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      background-color: #2f2f2f;
+    }
+
+    .terminal-button {
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: #eee;
+    }
+
+    .terminal-button.close {
+      background-color: #ff5f56;
+    }
+
+    .terminal-button.minimize {
+      background-color: #ffbd2e;
+    }
+
+    .terminal-button.maximize {
+      background-color: #27c93f;
+    }
+
+    .terminal-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: calc(100% - 30px);
+      background-color: #1a1a1a;
+    }
+
+    .terminal-side {
+      width: 10%;
+      background-color: #1f1f1f;
+    }
+
+    .terminal-main {
+      flex-grow: 1;
+      padding: 10px;
+      color: #ddd;
+    }
+
+    .terminal-footer {
+      height: 30px;
+      background-color: #1f1f1f;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <h3>Spinach.ai</h3>
+    </div>
+    <div class="Parent">
+      <div class="child1">
+        <div class="image">
+        </div>   
+      </div>
+      <div class="child2">
+        <div class="terminal-container">
+          <div class="terminal-header">
+            <div class="terminal-button close"></div>
+            <div class="terminal-button minimize"></div>
+            <div class="terminal-button maximize"></div>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-side"></div>
+            <div class="terminal-main">
+              <div class="text-animation">
+                  <h1 id="text">Do </h1>
+                  <script type="text/javascript">
+                    var i = 0,
+                      text;
+                    text = "you think this is cool?"
+          
+                    function typing() {
+                      if (i < text.length) {
+                        document.getElementById("text").innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typing, 100);
+                      }
+                    }
+                    typing();
+                  </script>
+                </div>
+                <div class="description">
+                  <h4>Contact us for more inquiries</h4>
+                  <br>
+                  <a href="https://forms.gle/mMU9YnHLLPuSFhLS9">
+                    <button>Contact us now</button>
+                  </a>
+                </div>
+            </div>
+            <div class="terminal-side"></div>
+          </div>
+          <div class="terminal-footer"></div>
+        </div
+      
+      </div>    
+    </div>
+  </body>
+</html>
